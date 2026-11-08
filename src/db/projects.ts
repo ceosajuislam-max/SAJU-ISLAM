@@ -18,4 +18,20 @@ export const allVideoProjects: VideoProject[] = [
     software_used: ["DaVinci Resolve"],
   },
   
+  {
+    id: "6f5_fntYNkQ",
+    video_title: "একজন ফেসবুক ইঞ্জিনিয়ারের রিজিউমি কেমন হয়?",
+    video_description: `How to Build Your Perfect Resume: Learn from a FAANG Employee Example! Are you ready to take your career to new heights and secure your dream job at a top tech company? Join us on this exclusive journey inside the mind of a FAANG employee as we unveil the secrets of their perfect resume! In this eye-opening video, you'll discover the exact strategies and tips used by the industry's finest to stand out from the crowd and impress recruiters.`,
+    tags: ["Resume Tips", "FAANG Career", "Job Preparation", "Career Advice"],
+    cover_image: "6f5_fntYNkQ",
+    publish_date: "2024-08-04",
+    client_name: "Stack Learner",
+    client_image: "/companies/sl-logo.png",
+    client_feedback: "",
+    video_link: "https://www.youtube.com/watch?v=6f5_fntYNkQ",
+    project_images: [],
+    category: ["Documentory"],
+    duration: "6:32",
+    software_used: ["DaVinci Resolve"],
+  },
 ];
