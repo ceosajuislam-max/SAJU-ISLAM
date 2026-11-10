@@ -68,7 +68,7 @@ export default function AboutPage() {
                       transition={{ delay: 0.2 }}
                       className="text-4xl md:text-6xl font-black text-white leading-tight tracking-tighter"
                     >
-                      <br />SAJU 
+                      <br />SAJU  
                       <span className="text-White"> ISLAM</span>
                     </m.div>
                     <div className="h-1 w-16 md:w-20 bg-purple-500 mt-4 rounded-full" />
