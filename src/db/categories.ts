@@ -3,6 +3,7 @@ export const categories = [
   "Talking Head",
   "Shorts",
   "Promo",
+  "Tech Feceless",
   "Documentary",
   "Motion Graphics",
   "Explainer",
