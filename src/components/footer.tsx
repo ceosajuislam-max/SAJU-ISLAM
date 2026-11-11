@@ -109,12 +109,12 @@ export default function Footer() {
           <p className="text-gray-500 text-sm flex items-center justify-center gap-1.5">
             Made with <Heart className="text-red-500 fill-red-500/20" size={14} /> by{" "}
             <a
-              href="https://www.linkedin.com/in/naimur202164"
+              href="https://www.linkedin.com/in/mr-saju0"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-white transition-colors underline decoration-dotted underline-offset-4"
             >
-              Md. Naimur Rahman
+              Saju Islam
             </a>{" "}
             © {currentYear}
           </p>

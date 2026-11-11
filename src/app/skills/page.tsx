@@ -35,29 +35,6 @@ const iconMap = [
   { icon: <Send size={20} />, bg: "#6366f1" }, // Final Delivery
 ];
 
-const finalCutProImage = `data:image/svg+xml;utf8,${encodeURIComponent(`
-<svg width="160" height="160" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="bg" x1="20" y1="12" x2="140" y2="148" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#5B2D8C"/>
-      <stop offset="1" stop-color="#2A134F"/>
-    </linearGradient>
-    <linearGradient id="glow" x1="36" y1="26" x2="124" y2="124" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#F7B9FF"/>
-      <stop offset="1" stop-color="#A78BFA"/>
-    </linearGradient>
-  </defs>
-  <rect x="4" y="4" width="152" height="152" rx="30" fill="url(#bg)"/>
-  <path d="M28 48C28 34.745 38.745 24 52 24H110C125.464 24 138 36.536 138 52V108C138 123.464 125.464 136 110 136H52C38.745 136 28 125.255 28 112V48Z" fill="rgba(255,255,255,0.06)"/>
-  <path d="M34 52C34 40.954 42.954 32 54 32H106C120.359 32 132 43.641 132 58V102C132 116.359 120.359 128 106 128H54C42.954 128 34 119.046 34 108V52Z" stroke="url(#glow)" stroke-width="6" stroke-linecap="round"/>
-  <path d="M54 56H98C108.493 56 117 64.507 117 75C117 85.493 108.493 94 98 94H54V56ZM54 94H100C110.493 94 119 102.507 119 113C119 123.493 110.493 132 100 132H54V94Z" fill="url(#glow)" opacity="0.85"/>
-  <rect x="58" y="66" width="6" height="30" rx="3" fill="#2B1648"/>
-  <rect x="58" y="102" width="6" height="20" rx="3" fill="#2B1648"/>
-  <path d="M79 72C88.924 72 97 80.076 97 90C97 99.924 88.924 108 79 108H70V72H79Z" fill="#F5D8FF" opacity="0.9"/>
-  <path d="M46 60H70V98H46C40.477 98 36 93.523 36 88V70C36 64.477 40.477 60 46 60Z" fill="#F3E8FF" opacity="0.18"/>
-</svg>
-`)}`;
-
 export default function SkillsPage() {
   return (
     <div className="min-h-screen py-20 px-4">
@@ -95,43 +72,62 @@ export default function SkillsPage() {
             Technical Skills
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {[
-              {
-                name: "Final Cut Pro",
-                description: "Professional video editing with Final Cut Pro.",
-                image_link: "/Users/saju/Downloads/mini-hero-final-cut-pro-acs.png",
-              },
-              ...videoEditingSkills.filter(
-                (skill) => skill.name !== "Adobe Photoshop",
-              ),
-            ].map((skill, index) => (
-              <m.div
-                key={skill.name}
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-              >
-                <GlassmorphismCard className="p-6">
-                  <div className="flex items-center mb-4 space-x-4">
-                    <div className="relative w-12 md:w-16 h-12 md:h-16 shrink-0 rounded-xl bg-slate-900/60 p-1 overflow-hidden">
-                      <Image
-                        src={skill.image_link || ""}
-                        alt={skill.name}
-                        width={64}
-                        height={64}
-                        className="w-full h-full object-contain"
-                      />
-                    </div>
-                    <h3 className="text-lg font-semibold text-white">
-                      {skill.name}
-                    </h3>
+            <m.div
+              key="Final Cut Pro"
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+            >
+              <GlassmorphismCard className="p-6">
+                <div className="flex items-center mb-4 space-x-4">
+                  <div className="relative w-12 md:w-16 h-12 md:h-16 shrink-0 rounded-xl bg-slate-900/60 p-1 overflow-hidden">
+                    <Image
+                      src="/tools/Final%20Cut%20Pro.png"
+                      alt="Final Cut Pro logo"
+                      width={64}
+                      height={64}
+                      className="w-full h-full object-contain"
+                    />
                   </div>
-                  <p className="text-gray-400 text-sm mb-4">
-                    {skill.description}
-                  </p>
-                </GlassmorphismCard>
-              </m.div>
-            ))}
+                  <h3 className="text-lg font-semibold text-white">
+                    Final Cut Pro
+                  </h3>
+                </div>
+                <p className="text-gray-400 text-sm mb-4">
+                  Professional video editing with a magnetic timeline, motion graphics
+                </p>
+              </GlassmorphismCard>
+            </m.div>
+            {videoEditingSkills
+              .filter((skill) => skill.name !== "Adobe Photoshop")
+              .map((skill, index) => (
+                <m.div
+                  key={skill.name}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5, delay: (index + 1) * 0.1 }}
+                >
+                  <GlassmorphismCard className="p-6">
+                    <div className="flex items-center mb-4 space-x-4">
+                      <div className="relative w-12 md:w-16 h-12 md:h-16 shrink-0 rounded-xl bg-slate-900/60 p-1 overflow-hidden">
+                        <Image
+                          src={skill.image_link || ""}
+                          alt={skill.name}
+                          width={64}
+                          height={64}
+                          className="w-full h-full object-contain"
+                        />
+                      </div>
+                      <h3 className="text-lg font-semibold text-white">
+                        {skill.name}
+                      </h3>
+                    </div>
+                    <p className="text-gray-400 text-sm mb-4">
+                      {skill.description}
+                    </p>
+                  </GlassmorphismCard>
+                </m.div>
+              ))}
           </div>
         </m.div>
 

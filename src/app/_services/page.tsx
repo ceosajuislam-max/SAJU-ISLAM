@@ -159,6 +159,7 @@ export default function ServicesPage() {
           <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
             My Services
           </h1>
+          <p className="text-lg font-medium text-blue-400 mb-6">My Services</p>
           <p className="text-gray-300 text-lg max-w-3xl mx-auto">
             From concept to completion, I offer comprehensive video editing and
             motion graphics services to bring your vision to life.
